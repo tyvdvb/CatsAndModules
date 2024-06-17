@@ -22,7 +22,7 @@ workflows:
         PARAM: "CATS"
     scripts:
       - name: Build and export
-        script: ./archive-and-export.sh $PARAM
+        script: ./task.sh $PARAM
         ignore_failure: true
     artifacts:
       - build/ios/ipa/*.ipa
@@ -35,5 +35,4 @@ workflows:
             - tester-groups
       email:
         recipients:
-          - o.frankiv@ukma.edu.ua
           - iryna.nazar@ukma.edu.ua
