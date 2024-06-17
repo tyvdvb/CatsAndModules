@@ -30,3 +30,4 @@ struct CatsAndModules_IrynaNazarApp: App {
         }
     }
 }
+
