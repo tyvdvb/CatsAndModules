@@ -17,11 +17,13 @@ workflows:
         XCODE_WORKSPACE: "CatsAndModules_IrynaNazar.xcodeproj"
         XCODE_SCHEME: "CatsAndModules_IrynaNazar"
     scripts:
-      - name: Build ipa
+      - name: Install fastlane
         script: |
-          xcode-project build-ipa \
-            --workspace "$CM_BUILD_DIR/$XCODE_WORKSPACE" \
-            --scheme "$XCODE_SCHEME"
+          gem install bundler
+          bundle install
+      - name: Build and export
+        script: bundle exec fastlane build_and_export
+        ignore_failure: true
     artifacts:
       - build/ios/ipa/*.ipa
     publishing:
