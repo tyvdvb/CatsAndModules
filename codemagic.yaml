@@ -14,7 +14,7 @@ workflows:
         - firebase_credentials
     publishing:
       firebase:
-        firebase_service_account: $FIREBASE_SERVICE_ACCOUNT
+        firebase_token $FIREBASE_TOKEN
         ios:
           app_id: "1:312340303940:ios:21ef4c839afc3c369fac11"
           groups:
