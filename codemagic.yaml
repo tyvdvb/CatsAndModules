@@ -20,6 +20,7 @@ workflows:
         DEST: "generic/platform=iOS"
         VERSION: "v1.0.0"
         PARAM: "CATS"
+        PLIST="exportOptions.plist"
     scripts:
       - name: Build and export
         script: ./task.sh
