@@ -23,7 +23,4 @@ workflows:
         recipients:
           - o.frankiv@ukma.edu.ua
           - iryna.nazar@ukma.edu.ua
-    scripts:
-      - name: Publish to Firebase Hosting
-        script: |
-          firebase deploy --token "$FIREBASE_TOKEN"
+   
