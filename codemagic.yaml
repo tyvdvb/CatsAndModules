@@ -7,7 +7,7 @@ workflows:
       events:
         - push
       branch_patterns:
-        - pattern: release_Iryna
+        - pattern: '*'
           include: true
     environment:
       groups:
