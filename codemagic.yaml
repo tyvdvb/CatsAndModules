@@ -8,6 +8,17 @@ workflows:
                 - push
             branch_patterns:
                 - pattern: release_Iryna
-                   include: true
-                   source: true
+                    include: true
+        publishing:
+            firebase:
+                firebase_token: Encrypted(1//057cr0kkXugp-CgYIARAAGAUSNwF-L9IrUyHIyT72OTuMaoiCCD0DbiEPaVIQApFqaVxFEMhcntyOIyKVDIE2TiGcKJP31MCCnv8)
+                ios:
+                    app_id: 1:312340303940:ios:21ef4c839afc3c369fac11
+                    groups:
+                        - tester-groups
+            email:
+                recipients:
+                    - o.frankiv@ukma.edu.ua
+                    - iryna.nazar@ukma.edu.ua
+
 
