@@ -7,7 +7,7 @@ workflows:
       events:
         - push
       branch_patterns:
-        - pattern: '*'
+        - pattern: release_Iryna
           include: true
     environment:
       groups:
@@ -23,6 +23,7 @@ workflows:
         recipients:
           - o.frankiv@ukma.edu.ua
           - iryna.nazar@ukma.edu.ua
-    artifacts:
-      - build/ios/ipa/*.ipa
-      - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM
+    scripts:
+      - name: Publish to Firebase Hosting
+        script: |
+          firebase deploy --token "$FIREBASE_TOKEN"
