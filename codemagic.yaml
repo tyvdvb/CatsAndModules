@@ -12,15 +12,29 @@ workflows:
     environment:
       groups:
         - firebase_credentials
+    scripts:
+      - name: Echo single line script
+        script: echo "single line script"
+      - name: Install fastlane
+        script: |
+          gem install bundler
+          bundle install
+      - name: Build and export
+        script: bundle exec fastlane build_and_export
+        ignore_failure: true
+      - name: Build for iOS
+        script: flutter build ios
+    artifacts:
+      - build/ios/ipa/*.ipa
+      - $HOME/Library/Developer/Xcode/DerivedData//Build//*.dSYM
     publishing:
       firebase:
         firebase_token: $FIREBASE_TOKEN
-        ios:
-          app_id: "1:312340303940:ios:21ef4c839afc3c369fac11"
-          groups:
-            - tester-groups
-      email:
-        recipients:
-          - o.frankiv@ukma.edu.ua
-          - iryna.nazar@ukma.edu.ua
-   
+      ios:
+        app_id: "1:312340303940:ios:21ef4c839afc3c369fac11"
+        groups:
+          - tester-groups
+        email:
+          recipients:
+            - o.frankiv@ukma.edu.ua
+            - iryna.nazar@ukma.edu.ua
