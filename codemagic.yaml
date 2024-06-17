@@ -17,10 +17,6 @@ workflows:
         XCODE_WORKSPACE: "CatsAndModules_IrynaNazar.xcodeproj"
         XCODE_SCHEME: "CatsAndModules_IrynaNazar"
     scripts:
-      - name: Install fastlane
-        script: |
-          gem install bundler
-          bundle install
       - name: Build and export
         script: bundle exec fastlane build_and_export
         ignore_failure: true
