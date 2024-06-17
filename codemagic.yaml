@@ -1,28 +1,28 @@
 workflows:
-    sample-workflow:
+  sample-workflow:
     name: Codemagic Sample Workflow
     max_build_duration: 120
     instance_type: mac_mini_m1
     triggering:
-        events:
+      events:
         - push
-        branch_patterns:
+      branch_patterns:
         - pattern: '*'
-            include: true
+          include: true
     environment:
-        groups:
+      groups:
         - firebase_credentials
     publishing:
-        firebase:
+      firebase:
         firebase_token: $FIREBASE_TOKEN
         ios:
-            app_id: "1:312340303940:ios:21ef4c839afc3c369fac11"
-            groups:
+          app_id: "1:312340303940:ios:21ef4c839afc3c369fac11"
+          groups:
             - tester-groups
-        email:
+      email:
         recipients:
-            - o.frankiv@ukma.edu.ua
-            - iryna.nazar@ukma.edu.ua
+          - o.frankiv@ukma.edu.ua
+          - iryna.nazar@ukma.edu.ua
     artifacts:
-        - build/ios/ipa/*.ipa
-        - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM
+      - build/ios/ipa/*.ipa
+      - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM
