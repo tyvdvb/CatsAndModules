@@ -22,7 +22,7 @@ workflows:
         PARAM: "CATS"
     scripts:
       - name: Build and export
-        script: ./task.sh $PARAM
+        script: ./task.sh
         ignore_failure: true
     artifacts:
       - build/ios/ipa/*.ipa
