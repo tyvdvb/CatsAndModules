@@ -24,17 +24,17 @@ workflows:
     scripts:
       - name: Build and export
         script:
-          "${PLISTBUDDY}" ./task.sh
-          ignore_failure: true  
+        "${PLISTBUDDY}" ./task.sh
+        ignore_failure: true
     artifacts:
       - build/ios/ipa/*.ipa
     publishing:
       firebase:
         firebase_token: $FIREBASE_TOKEN
-      ios:
-        app_id: "1:312340303940:ios:21ef4c839afc3c369fac11"
-        groups:
-          - tester-groups
+        ios:
+          app_id: "1:312340303940:ios:21ef4c839afc3c369fac11"
+          groups:
+            - tester-groups
       email:
         recipients:
           - iryna.nazar@ukma.edu.ua
