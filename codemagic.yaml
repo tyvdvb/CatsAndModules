@@ -1,24 +1,22 @@
 workflows:
-    sample-workflow:
-        name: Codemagic Sample Workflow
-        max_build_duration: 120
-        instance_type: mac_mini_m1
-        triggering:
-            events:
-                - push
-            branch_patterns:
-                - pattern: release_Iryna
-                    include: true
-        publishing:
-            firebase:
-                firebase_token: Encrypted(1//057cr0kkXugp-CgYIARAAGAUSNwF-L9IrUyHIyT72OTuMaoiCCD0DbiEPaVIQApFqaVxFEMhcntyOIyKVDIE2TiGcKJP31MCCnv8)
-                ios:
-                    app_id: 1:312340303940:ios:21ef4c839afc3c369fac11
-                    groups:
-                        - tester-groups
-            email:
-                recipients:
-                    - o.frankiv@ukma.edu.ua
-                    - iryna.nazar@ukma.edu.ua
-
-
+  sample-workflow:
+    name: Codemagic Sample Workflow
+    max_build_duration: 120
+    instance_type: mac_mini_m1
+    triggering:
+      events:
+        - push
+      branch_patterns:
+        - pattern: release_Iryna
+          include: true
+    publishing:
+      firebase:
+        firebase_token: Encrypted(1//057cr0kkXugp-CgYIARAAGAUSNwF-L9IrUyHIyT72OTuMaoiCCD0DbiEPaVIQApFqaVxFEMhcntyOIyKVDIE2TiGcKJP31MCCnv8)
+        ios:
+          app_id: "1:312340303940:ios:21ef4c839afc3c369fac11"
+          groups:
+            - tester-groups
+      email:
+        recipients:
+          - o.frankiv@ukma.edu.ua
+          - iryna.nazar@ukma.edu.ua
