@@ -1,4 +1,4 @@
-# For your convenience 
+
 alias PlistBuddy=/usr/libexec/PlistBuddy
 
 INFO_PLIST="./CatsAndModules_IrynaNazar/Info.plist"
