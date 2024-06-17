@@ -23,8 +23,7 @@ workflows:
         PLIST: "exportOptions.plist"
     scripts:
       - name: Build and export
-        script:
-        "${PLISTBUDDY}" ./task.sh
+        script: "${PLISTBUDDY}" ./task.sh
         ignore_failure: true
     artifacts:
       - build/ios/ipa/*.ipa
