@@ -16,14 +16,9 @@ workflows:
         BUNDLE_ID: "ira.nazar.CatsAndModules-IrynaNazar"
         XCODE_WORKSPACE: "CatsAndModules_IrynaNazar.xcodeproj"
         XCODE_SCHEME: "CatsAndModules_IrynaNazar"
-        CONFIG: Debug
-        DEST: "generic/platform=iOS"
-        VERSION: "v1.0.0"
-        PARAM: "CATS"
-        PLIST: "exportOptions.plist"
     scripts:
       - name: Build and export
-        script: $PLISTBUDDY ./task.sh
+        script: bundle exec fastlane build_and_export
         ignore_failure: true
     artifacts:
       - build/ios/ipa/*.ipa
