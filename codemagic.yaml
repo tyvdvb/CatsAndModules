@@ -8,6 +8,6 @@ workflows:
                 - push
             branch_patterns:
                 - pattern: release_Iryna
-                    include: true
-
+                   include: true
+                   source: true
 
