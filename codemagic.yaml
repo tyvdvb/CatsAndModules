@@ -1,18 +1,18 @@
 workflows:
-  sample-workflow:
+    sample-workflow:
     name: Codemagic Sample Workflow
     max_build_duration: 120
     instance_type: mac_mini_m1
     triggering:
-      events:
+        events:
         - push
-      branch_patterns:
+        branch_patterns:
         - pattern: 'release_Iryna'
-          include: true
+            include: true
     environment:
-      groups:
+        groups:
         - firebase_credentials
-      vars:
+        vars:
         BUNDLE_ID: "ira.nazar.CatsAndModules-IrynaNazar"
         XCODE_WORKSPACE: "CatsAndModules_IrynaNazar.xcodeproj"
         XCODE_SCHEME: "CatsAndModules_IrynaNazar"
@@ -22,18 +22,18 @@ workflows:
         PARAM: "CATS"
         PLIST: "exportOptions.plist"
     scripts:
-      - name: Build and export
+        - name: Build and export
         script: "${PLISTBUDDY}" ./task.sh
         ignore_failure: true
     artifacts:
-      - build/ios/ipa/*.ipa
+        - build/ios/ipa/*.ipa
     publishing:
-      firebase:
+        firebase:
         firebase_token: $FIREBASE_TOKEN
         ios:
-          app_id: "1:312340303940:ios:21ef4c839afc3c369fac11"
-          groups:
+            app_id: "1:312340303940:ios:21ef4c839afc3c369fac11"
+            groups:
             - tester-groups
-      email:
+        email:
         recipients:
-          - iryna.nazar@ukma.edu.ua
+            - iryna.nazar@ukma.edu.ua
