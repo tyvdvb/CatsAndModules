@@ -12,10 +12,10 @@ workflows:
     environment:
       groups:
         - firebase_credentials
-          vars:
-            BUNDLE_ID: "ira.nazar.CatsAndModules-IrynaNazar"
-            XCODE_WORKSPACE: "CatsAndModules_IrynaNazar.xcodeproj"
-            XCODE_SCHEME: "CatsAndModules_IrynaNazar"
+      vars:
+        BUNDLE_ID: "ira.nazar.CatsAndModules-IrynaNazar"
+        XCODE_WORKSPACE: "CatsAndModules_IrynaNazar.xcodeproj"
+        XCODE_SCHEME: "CatsAndModules_IrynaNazar"
     scripts:
       - name: Build ipa
         script: |
