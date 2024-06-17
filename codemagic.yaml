@@ -7,7 +7,7 @@ workflows:
       events:
         - push
       branch_patterns:
-        - pattern: release_Iryna
+        - pattern: 'release_Iryna'
           include: true
     environment:
       groups:
@@ -24,7 +24,6 @@ workflows:
         script: flutter build ios
     artifacts:
       - build/ios/ipa/*.ipa
-      - $HOME/Library/Developer/Xcode/DerivedData//Build//*.dSYM
     publishing:
       firebase:
         firebase_token: $FIREBASE_TOKEN
