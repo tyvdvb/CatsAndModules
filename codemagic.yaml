@@ -16,7 +16,7 @@ workflows:
       - name: Build
         script: |
           flutter pub get
-          flutter build ios --release --no-codesign
+          flutter build ios
     publishing:
       firebase:
         firebase_service_account: $FIREBASE_SERVICE_ACCOUNT
