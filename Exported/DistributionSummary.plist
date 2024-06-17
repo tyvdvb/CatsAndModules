@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CatsAndModules_IrynaNazar.ipa</key>
+	<array>
+		<dict>
+			<key>architectures</key>
+			<array>
+				<string>arm64</string>
+			</array>
+			<key>buildNumber</key>
+			<string>1</string>
+			<key>certificate</key>
+			<dict>
+				<key>SHA1</key>
+				<string>491E443A26FD72DAF1792BE343F7E360B8F4DED3</string>
+				<key>dateExpires</key>
+				<string>2025-06-17</string>
+				<key>type</key>
+				<string>Apple Development</string>
+			</dict>
+			<key>embeddedBinaries</key>
+			<array>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>arm64</string>
+					</array>
+					<key>buildNumber</key>
+					<string>1</string>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>491E443A26FD72DAF1792BE343F7E360B8F4DED3</string>
+						<key>dateExpires</key>
+						<string>2025-06-17</string>
+						<key>type</key>
+						<string>Apple Development</string>
+					</dict>
+					<key>name</key>
+					<string>Networking.framework</string>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>GDT3GT22C8</string>
+						<key>name</key>
+						<string></string>
+					</dict>
+					<key>versionNumber</key>
+					<string>1.0</string>
+				</dict>
+			</array>
+			<key>entitlements</key>
+			<dict>
+				<key>application-identifier</key>
+				<string>GDT3GT22C8.ira.nazar.CatsAndModules-IrynaNazar</string>
+				<key>com.apple.developer.team-identifier</key>
+				<string>GDT3GT22C8</string>
+				<key>get-task-allow</key>
+				<true/>
+			</dict>
+			<key>name</key>
+			<string>CatsAndModules_IrynaNazar.app</string>
+			<key>profile</key>
+			<dict>
+				<key>UUID</key>
+				<string>2fea7968-7e02-4e17-babd-a9133c9704ff</string>
+				<key>dateExpires</key>
+				<string>2024-06-24</string>
+				<key>name</key>
+				<string>iOS Team Provisioning Profile: ira.nazar.CatsAndModules-IrynaNazar</string>
+			</dict>
+			<key>team</key>
+			<dict>
+				<key>id</key>
+				<string>GDT3GT22C8</string>
+				<key>name</key>
+				<string></string>
+			</dict>
+			<key>versionNumber</key>
+			<string>1.0</string>
+		</dict>
+	</array>
+</dict>
+</plist>
