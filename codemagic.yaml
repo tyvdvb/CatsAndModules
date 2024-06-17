@@ -12,6 +12,11 @@ workflows:
     environment:
       groups:
         - firebase_credentials
+    scripts:
+      - name: Build
+        script: |
+          flutter pub get
+          flutter build ios --release --no-codesign
     publishing:
       firebase:
         firebase_service_account: $FIREBASE_SERVICE_ACCOUNT
