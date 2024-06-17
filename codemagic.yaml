@@ -12,18 +12,6 @@ workflows:
     environment:
       groups:
         - firebase_credentials
-    scripts:
-      - name: Install fastlane
-        script: |
-          gem install bundler
-          bundle install
-      - name: Build and export
-        script: bundle exec fastlane build_and_export
-        ignore_failure: true
-      - name: Build for iOS
-        script: flutter build ios
-    artifacts:
-      - build/ios/ipa/*.ipa
     publishing:
       firebase:
         firebase_token: $FIREBASE_TOKEN
