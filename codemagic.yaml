@@ -13,8 +13,6 @@ workflows:
       groups:
         - firebase_credentials
     scripts:
-      - name: Echo single line script
-        script: echo "single line script"
       - name: Install fastlane
         script: |
           gem install bundler
